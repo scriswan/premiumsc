@@ -263,7 +263,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "$(figlet   "")" | lolcat
 echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
-echo -e "\e[38;5;162m   \e[44;97;1m               KEYRIS VPNSTORE LITE                \033[0m \e[38;5;162m\e[0m"
+echo -e "\e[38;5;162m   \e[44;97;1m               FREENET LITE                \033[0m \e[38;5;162m\e[0m"
 echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
 echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
 echo -e "${BIYellow} │  ${BIYellow}OS        :  ${BIYellow}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' )${NC}"
