@@ -2,7 +2,7 @@
 
 BURIQ () {
     # Mengunduh daftar register dari URL baru dan menyimpannya ke dalam file sementara
-    curl -sS https://raw.githubusercontent.com/scriswan/premiumsc/main/register > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/register > /root/tmp
     
     # Mendapatkan IP pengguna saat ini
     MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -39,7 +39,7 @@ BURIQ () {
 MYIP=$(curl -sS ipv4.icanhazip.com)
 
 # Mendapatkan nama berdasarkan IP yang sesuai di file register
-Name=$(curl -sS https://raw.githubusercontent.com/scriswan/premiumsc/main/register | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/register | grep $MYIP | awk '{print $2}')
 
 # Menyimpan nama ke file .ini untuk pemeriksaan izin
 echo $Name > /usr/local/etc/.$Name.ini
@@ -64,7 +64,7 @@ PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
     
     # Memeriksa apakah IP ada di daftar register
-    IZIN=$(curl -sS https://raw.githubusercontent.com/scriswan/premiumsc/main/register | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/register | awk '{print $4}' | grep $MYIP)
     
     if [ "$MYIP" = "$IZIN" ]; then
         Bloman
@@ -80,7 +80,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/scriswan/premiumsc/main/register | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/register | grep $MYIP | awk '{print $3}')
 fi
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
 let vla=$vlx/2
@@ -257,7 +257,7 @@ d1=$(date -d "$1" +%s)
 d2=$(date -d "$2" +%s)
 }
 mai="datediff "$Exp" "$DATE""
-export sem=$( curl -s https://raw.githubusercontent.com/scriswan/premiumsc/main/version)
+export sem=$( curl -s https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/version)
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
