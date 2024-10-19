@@ -64,11 +64,6 @@ echo -e "\e[33m─────────────────────�
 echo -e "Aktif: $masaaktif Hari"
 echo -e "Exp Pada: $exp" 
 echo -e "\e[33m───────────────────────────\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[40;1;37mTerimakasih Sudah Order😘  \E[0m"
-echo -e "\E[40;1;37mGaransi Kami Pull sampe exp  \E[0m"
-echo -e "\E[40;1;37mBy t.me/Riswanvpnstore  \E[0m"
-echo -e "\E[40;1;37mGrup tele t.me/grupvpnriswan  \E[0m"
-echo -e "\e[33m───────────────────────────\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
