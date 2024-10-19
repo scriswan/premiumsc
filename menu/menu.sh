@@ -95,7 +95,7 @@ UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-c
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green
-BIYellow='\[40;1;37m'     # Yellow
+BIYellow='\033[1;97m'     # Yellow
 BIBlue='\033[1;94m'       # Blue
 BIPurple='\033[1;95m'     # Purple
 BICyan='\033[1;96m'       # Cyan
@@ -262,10 +262,10 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "$(figlet   "")" | lolcat
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
 echo -e "\e[38;5;162m   \e[44;97;1m               FREENET LITE                \033[0m \e[38;5;162m\e[0m"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
 echo -e "${BIYellow} │  ${BIYellow}OS        :  ${BIYellow}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' )${NC}"
 echo -e "${BIYellow} │  ${BIYellow}NS        :  ${BIYellow}$(cat /root/nsdomain)${NC}"
 echo -e "${BIYellow} │  ${BIYellow}DOMAIN    :  ${BIYellow}$(cat /etc/xray/domain)${NC}"
@@ -274,18 +274,13 @@ echo -e "${BIYellow} │  ${BIYellow}SWAP RAM  :  ${BIYellow}$uram / $tram MB${N
 echo -e "${BIYellow} │  ${BIYellow}IP VPS    :  ${BIYellow}$IPVPS${NC}"
 echo -e "${BIYellow} │  ${BIYellow}REBOOT    :  ${BIYellow}jam 02:00 malam${NC}"
 echo -e "${BIYellow} │  ${BIYellow}TELEGRAM  :  ${BIYellow}@Riswanvpnstore${NC}"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
 echo -e " ${BIYellow}│   ${BIYellow}SSH${NC}    :$ressh"" ${BIYellow}NGINX${NC}    :$resngx"" ${BIYellow}XRAY${NC}   :$resv2r"" ${BIYellow}TROJAN${NC}: $resv2r"
 echo -e " ${BIYellow}│   ${BIYellow}STUNNEL${NC}:$resst" "${BIYellow}DROPBEAR${NC} :$resdbr" "${BIYellow}SSH-WS${NC} :$ressshws"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
-echo -e "${BIYellow}           ═══════════════════════════════════${NC}"
-echo -e "${BIYellow}                ${BIYellow}SSH    TOTAL ACCOUNT : $ssh1$NC" 
-echo -e "${BIYellow}                ${BIYellow}VLESS  TOTAL ACCOUNT : $vla$NC"  
-echo -e "${BIYellow}                ${BIYellow}VMESS  TOTAL ACCOUNT : $vma$NC"
-echo -e "${BIYellow}                ${BIYellow}TROJAN TOTAL ACCOUNT : $tra$NC"  
-echo -e "${BIYellow}           ═══════════════════════════════════${NC}"
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${BIYellow}                         SSH: $ssh1    VLESS: $vla    VMESS: $vma    TROJAN: $tra${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
 echo -e "${BIYellow} │  ${BICyan}[${BIWhite}01${BICyan}] SSH     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}08${BICyan}] ADD-HOST        ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
 echo -e "${BIYellow} │  ${BICyan}[${BIWhite}02${BICyan}] VMESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}09${BICyan}] RUNNING         ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
 echo -e "${BIYellow} │  ${BICyan}[${BIWhite}03${BICyan}] VLESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}10${BICyan}] INSTALL UDP     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
@@ -293,12 +288,12 @@ echo -e "${BIYellow} │  ${BICyan}[${BIWhite}04${BICyan}] TROJAN  ${BICyan}[${B
 echo -e "${BIYellow} │  ${BICyan}[${BIWhite}05${BICyan}] SETING  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}12${BICyan}] BANDWITH        ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
 echo -e "${BIYellow} │  ${BICyan}[${BIWhite}06${BICyan}] TRIALL  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}13${BICyan}] UPDATE SCRIPT   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
 echo -e "${BIYellow} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
 echo -e "${BIYellow} │${BIYellow} Version Script : $(cat /opt/.ver) Last Update ${BIYellow}"
 echo -e "${BIYellow} │${BIYellow} Username       :\033[1;36m $Name \e[0m"
 echo -e "${BIYellow} │${BIYellow} Expired script :${BIYellow} $exp ${BIYellow}:${BIYellow} $exp2${BIYellow} Days${NC}"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
+echo -e "${BIYellow} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
 echo -e ""
 read -p "                   Select angka >>> : " opt
 echo -e ""
