@@ -1,24 +1,14 @@
-## UPGRADE FOR DEBIAN AND UBUNTU
-Masukkan perintah dibawah jika anda menggunakan OS Debian Version 10 atau OS Ubuntu Version 20
-```
-apt update && apt upgrade -y --fix-missing && update-grub && sleep 2 && apt -y install xxd && apt install -y bzip2 && apt install -y wget && apt install -y curl && reboot
-```
-
 ## INSTALL SCRIPT 
-Masukkan perintah dibawah untuk menginstall Autoscript Premium by Riswanvpn
+Masukkan perintah dibawah untuk menginstall Autoscript
+## Step 1
 ```
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/scriswan/premiumsc/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+apt update -y && apt upgrade -y --fix-missing && apt install -y xxd bzip2 wget curl && update-grub && sleep 2 && reboot
 ```
-## INSTALL UDP COSTUM
-masukan perintah ctrl + c enter
+## Step 2
 ```
-wget https://raw.githubusercontent.com/gemilangvip/autoscript/main/files/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
-## UPDATE SC MANUAL 1
+## UPDATE SCRIPT
 ```
-wget https://raw.githubusercontent.com/scriswan/premiumsc/main/update.sh
-```
-## UPDATE SC MANUAL 2
-```
-chmod +x update.sh && ./update.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/update.sh && chmod +x update.sh && ./update.sh
 ```

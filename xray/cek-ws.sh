@@ -1,19 +1,7 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » Riswanvpn
-# Email      » Riswanvpn@gmail.com
-# telegram   » https://t.me/Riswanvpn
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Riswanvpn
-
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '###' | cut -d ' ' -f 2 | sort | uniq`);
-echo "-------------------------------";
-echo "-----=[ XRAY User Login ]=-----";
-echo "-------------------------------";
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -41,7 +29,6 @@ lastlogin=$(cat /var/log/xray/access.log | grep -w "$akun" | tail -n 500 | cut -
 echo -e "user :${GREEN} ${akun} ${NC}
 ${RED}Online Jam ${NC}: ${lastlogin} wib";
 echo -e "$jum2";
-echo "-------------------------------"
 fi
 rm -rf /tmp/ipxray.txt
 done

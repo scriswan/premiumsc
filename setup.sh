@@ -13,7 +13,7 @@ yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 # domain random
-CDN="https://raw.githubusercontent.com/scriswan/premiumsc/main/ssh"
+CDN="https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/ssh"
 cd /root
 if [ "${EUID}" -ne 0 ]; then
 echo "You need to run this script as root"
@@ -87,7 +87,7 @@ secs_to_human() {
 echo "Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds"
 }
 start=$(date +%s)
-ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+ln -fs /usr/share/zoneinfo/Asia/Makassar /etc/localtime
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 coreselect=''
@@ -125,7 +125,7 @@ echo -ne "[ ${green}INFO${NC} ] Check permission : "
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 echo ""
-wget -q https://raw.githubusercontent.com/scriswan/premiumsc/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 echo " "
@@ -166,7 +166,7 @@ fi
 # Inisialisasi
 MYIP=$(curl -sS ipv4.icanhazip.com)
 # Perizinan Sc & Pemanggilan username
-izinsc="https://raw.githubusercontent.com/scriswan/premiumsc/main/register"
+izinsc="https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/register"
 rm -f /usr/bin/user
 username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
@@ -214,14 +214,14 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/scriswan/premiumsc/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install BACKUP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/scriswan/premiumsc/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/backup/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -229,15 +229,15 @@ echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/scriswan/premiumsc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/scriswan/premiumsc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install SLOWDNS              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q -O slow.sh https://raw.githubusercontent.com/scriswan/premiumsc/main/slow.sh && chmod +x slow.sh && ./slow.sh
+wget -q -O slow.sh https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/slow.sh && chmod +x slow.sh && ./slow.sh
 clear
 cat> /root/.profile << END
 if [ "$BASH" ]; then
@@ -260,7 +260,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/scriswan/premiumsc/main/version )
+serverV=$( curl -sS https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/version )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -272,7 +272,6 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "===================-[ RISWAN-VPN ]-===================" | tee -a log-install.txt
 echo "------------------------------------------------------------" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
@@ -293,7 +292,7 @@ echo "   - Trojan WS            : 443" | tee -a log-install.txt
 echo "   - Trojan Go            : 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone             : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Timezone             : Asia/Makassar (GMT +8)"  | tee -a log-install.txt
 echo "   - Fail2Ban             : [ON]"  | tee -a log-install.txt
 echo "   - Dflate               : [ON]"  | tee -a log-install.txt
 echo "   - IPtables             : [ON]"  | tee -a log-install.txt
@@ -309,7 +308,6 @@ echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "------------------------------------------------------------" | tee -a log-install.txt
-echo "===============-[ Script By Riswanvpn ]-==============" | tee -a log-install.txt
 echo ""
 echo ""
 rm /root/setup.sh >/dev/null 2>&1

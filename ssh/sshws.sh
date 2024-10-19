@@ -1,13 +1,4 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » Riswanvpn
-# Email      » Riswanvpn@gmail.com
-# telegram   » https://t.me/Riswanvpn
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Riswanvpn
-
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
@@ -16,7 +7,7 @@ portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '
 if [ -f "/etc/systemd/system/sshws.service" ]; then
 clear
 else
-wget -q -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/scriswan/premiumsc/main/ssh/proxy3.js"
+wget -q -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/ssh/proxy3.js"
 cat <<EOF> /etc/systemd/system/sshws.service
 [Unit]
 Description=WSenabler
@@ -43,7 +34,7 @@ PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 if [[ ! -z "${PID}" ]]; then
 echo "Already ON !"
 else
-wget -q -O /usr/bin/ssh-wsenabler "https://raw.githubusercontent.com/scriswan/premiumsc/main/ssh/sshws-true.sh" && chmod +x /usr/bin/ssh-wsenabler && /usr/bin/ssh-wsenabler
+wget -q -O /usr/bin/ssh-wsenabler "https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/ssh/sshws-true.sh" && chmod +x /usr/bin/ssh-wsenabler && /usr/bin/ssh-wsenabler
 systemctl daemon-reload >/dev/null 2>&1
 systemctl enable sshws.service >/dev/null 2>&1
 systemctl start sshws.service >/dev/null 2>&1
@@ -84,5 +75,3 @@ fi
 read -n 1 -s -r -p "Press any key to back on menu"
 
 ssh-menu
-
-

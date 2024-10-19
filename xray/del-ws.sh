@@ -1,13 +1,4 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » Riswanvpn
-# Email      » Riswanvpn@gmail.com
-# telegram   » https://t.me/Riswanvpn
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Riswanvpn
-
 RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
@@ -61,4 +52,3 @@ echo "==============================="
 echo "Script By Riswanvpn"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
-

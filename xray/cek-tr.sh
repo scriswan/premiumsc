@@ -1,13 +1,4 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » Riswanvpn
-# Email      » Riswanvpn@gmail.com
-# telegram   » https://t.me/Riswanvpn
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Riswanvpn
-
 RED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
@@ -20,9 +11,6 @@ LIGHT='\033[0;37m'
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^#&#' | cut -d ' ' -f 2`);
-echo "-----------------------------------------";
-echo "---------=[ Trojan User Login ]=---------";
-echo "-----------------------------------------";
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -48,13 +36,11 @@ else
 jum2=$(cat /tmp/iptrojan.txt | nl)
 echo "user : $akun";
 echo "$jum2";
-echo "-----------------------------------------"
 fi
 rm -rf /tmp/iptrojan.txt
 done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
-echo "-----------------------------------------"
 echo "Script"
 rm -rf /tmp/other.txt

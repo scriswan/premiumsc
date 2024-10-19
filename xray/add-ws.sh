@@ -1,12 +1,4 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » Riswanvpn
-# Email      » Riswanvpn@gmail.com
-# telegram   » https://t.me/Riswanvpn
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Riswanvpn
 
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
@@ -132,12 +124,6 @@ echo -e "${vmesslink3}" | tee -a /etc/log-create-user.log
 echo -e "\e[33m───────────────────────────\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Aktif Selama : $masaaktif Hari"  
 echo -e "Exp Jatuh pada : $exp"  
-echo -e "\e[33m───────────────────────────\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[40;1;37mTerimakasih Kak Sudah Order 😘  \E[0m"
-echo -e "\E[40;1;37mGaransi Jika Akun Masih Ada  \E[0m"
-echo -e "\E[40;1;37mJagan lupa Perpanjang Ya  \E[0m"
-echo -e "\E[40;1;37mTelegram @Riswanvpnstore  \E[0m"
-echo -e "\E[40;1;37mGrup tele @grupvpnriswan  \E[0m"
 echo -e "\e[33m───────────────────────────\033[0m" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
