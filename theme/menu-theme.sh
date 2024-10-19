@@ -1,12 +1,4 @@
 #!/bin/bash
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# System Request : Debian 9+/Ubuntu 18.04+/20+
-# Develovers » @Riswanvpnstore
-# Email      » riswanacil00@gmail.com
-# telegram   » @Riswanvpnstore
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# Riswanvpn
 
 clear
 red='\033[0;31m'
@@ -49,7 +41,7 @@ figlet "theme-1" | lolcat
 menu1
 echo "--------------------------------------------------------"
 echo
-echo "Riswanvpn"
+echo "FreeNetlite"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -59,7 +51,7 @@ figlet "Theme-2" | lolcat
 menu2
 echo "--------------------------------------------------------"
 echo
-echo "Riswanvpn"
+echo "FreeNetlite"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -69,7 +61,7 @@ figlet "Theme-3"
 menu3
 echo "--------------------------------------------------------"
 echo
-echo "Riswanvpn"
+echo "FreeNetlite"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -79,7 +71,7 @@ figlet "Theme-4"
 menu4
 echo "--------------------------------------------------------"
 echo
-echo "Riswanvpn"
+echo "FreeNetlite"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -89,7 +81,7 @@ figlet "Theme-5"
 menu5
 echo "--------------------------------------------------------"
 echo
-echo "Riswanvpn"
+echo "FreeNetlite"
 echo
 echo "--------------------------------------------------------"
 fi
