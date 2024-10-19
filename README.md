@@ -5,7 +5,7 @@ wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/setup.sh && chmod
 ```
 ## INSTALL UDP COSTUM
 ```
-wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/files/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh
+wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/files/udp-custom.sh && chmod +x udp-custom.sh && ./udp-custom.sh
 ```
 ## UPDATE SC MANUAL 1
 ```
