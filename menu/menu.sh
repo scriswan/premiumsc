@@ -334,34 +334,34 @@ echo -e " ${w}◇━━━━━━━━━━━━━━━━━━━━━
 read -p "  Select From Options [ 1 - 9 or x] : " menu
 case $menu in
 1) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/bot2 && chmod +x bot2 && ./bot2
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/bot2 && chmod +x bot2 && ./bot2
     ;;
 2) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/restart-bot2 && chmod +x restart-bot2 && ./restart-bot2
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/restart-bot2 && chmod +x restart-bot2 && ./restart-bot2
     ;;
 3) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/stop-bot2 && chmod +x stop-bot2 && ./stop-bot2
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/stop-bot2 && chmod +x stop-bot2 && ./stop-bot2
     ;;
 4) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/del-bot2 && chmod +x del-bot2 && ./del-bot2
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/del-bot2 && chmod +x del-bot2 && ./del-bot2
     ;;
 5) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/add-bot && chmod +x add-bot && ./add-bot
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/add-bot && chmod +x add-bot && ./add-bot
     ;;
 6) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/hapus-bot && chmod +x hapus-bot && ./hapus-bot
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/hapus-bot && chmod +x hapus-bot && ./hapus-bot
     ;;
 7) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/stop-bot && chmod +x stop-bot && ./stop-bot
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/stop-bot && chmod +x stop-bot && ./stop-bot
     ;;
 8) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/restart-bot && chmod +x restart-bot && ./restart-bot
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/restart-bot && chmod +x restart-bot && ./restart-bot
     ;;
 9) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/add-bot-bersama && chmod +x add-bot-bersama && ./add-bot-bersama
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/add-bot-bersama && chmod +x add-bot-bersama && ./add-bot-bersama
    ;;
 10) clear ;
-    wget https://raw.githubusercontent.com/Lite-VPN/scpremium/main/botol/bot-bansos && chmod +x bot-bansos && ./bot-bansos
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/bot-bansos && chmod +x bot-bansos && ./bot-bansos
    ;;   
 x)
     menu
