@@ -291,8 +291,8 @@ echo -e "${BIYellow} │  ${BICyan}[${BIWhite}02${BICyan}] VMESS   ${BICyan}[${B
 echo -e "${BIYellow} │  ${BICyan}[${BIWhite}03${BICyan}] VLESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}10${BICyan}] INSTALL UDP     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
 echo -e "${BIYellow} │  ${BICyan}[${BIWhite}04${BICyan}] TROJAN  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}11${BICyan}] INSTALL BOT     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
 echo -e "${BIYellow} │  ${BICyan}[${BIWhite}05${BICyan}] SETING  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}12${BICyan}] BANDWITH        ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
-echo -e "${BIYellow} │  ${BICyan}[${BIWhite}06${BICyan}] TRIALL  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}13${BICyan}] MENU THEME      ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
-echo -e "${BIYellow} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}14${BICyan}] UPDATE SCRIPT   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
+echo -e "${BIYellow} │  ${BICyan}[${BIWhite}06${BICyan}] TRIALL  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}13${BICyan}] UPDATE SCRIPT      ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
+echo -e "${BIYellow} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"
 echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
 echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
 echo -e "${BIYellow} │${BIYellow} Version Script : $(cat /opt/.ver) Last Update ${BIYellow}"
@@ -344,8 +344,7 @@ x)
 esac
 ;;
 12) clear ; bw ;;
-13) clear ; menu-theme ;;
-14) clear ; update ;;
+13) clear ; update ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
