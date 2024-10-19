@@ -108,7 +108,7 @@ echo -e "[ ${green}INFO${NC} ] Pemasangan File Sudah Siapp Sayang"
 sleep 5
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 mkdir -p /var/lib/SIJA >/dev/null 2>&1
-echo "IP=" >> /var/lib/SIJA/ipvps.conf
+echo "IP=" >> /var/lib/ipvps.conf
 echo ""
 wget -q https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
@@ -125,7 +125,7 @@ clear
 	if test $dns -eq 1; then
     read -rp " Enter Your Domain / masukan domain : " dom
     read -rp " Input ur ns-domain : " -e nsdomen
-    echo "IP=$dom" > /var/lib/SIJA/ipvps.conf
+    echo "IP=$dom" > /var/lib/ipvps.conf
     echo "$dom" > /root/scdomain
 	echo "$dom" > /etc/xray/scdomain
 	echo "$dom" > /etc/xray/domain
