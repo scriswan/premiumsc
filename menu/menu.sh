@@ -95,7 +95,7 @@ UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-c
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green
-BIYellow='\E[40;1;37m'     # Yellow
+BIYellow='\[40;1;37m'     # Yellow
 BIBlue='\033[1;94m'       # Blue
 BIPurple='\033[1;95m'     # Purple
 BICyan='\033[1;96m'       # Cyan
@@ -312,7 +312,7 @@ case $opt in
 7) clear ; menu-backup ;;
 8) clear ; add-host ;;
 9) clear ; running ;;
-10) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+10) clear ; clear ; wget https://raw.githubusercontent.com/Rerechan02/UDP/main/udp.sh && chmod +x udp.sh && ./udp.sh ;;
 11) clear ; 
 echo -e " ${w}◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
 echo -e " ${w} $NC${f}                   BOT MANAGER                $NC${z} $NC"
