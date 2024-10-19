@@ -95,7 +95,7 @@ UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-c
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green
-BIYellow='\033[1;93m'     # Yellow
+BIYellow='\033[1;97m'     # Yellow
 BIBlue='\033[1;94m'       # Blue
 BIPurple='\033[1;95m'     # Purple
 BICyan='\033[1;96m'       # Cyan
@@ -211,7 +211,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 read -n 1 -s -r -p "Press any key to back on menu"
 setting-menu
 else
-echo "IP=$host" > /var/lib/scrz-prem/ipvps.conf
+echo "IP=$host" > /var/lib/ipvps.conf
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo "Dont forget to renew cert"
 echo ""
@@ -222,7 +222,7 @@ fi
 function genssl(){
 clear
 systemctl stop nginx
-domain=$(cat /var/lib/scrz-prem/ipvps.conf | cut -d'=' -f2)
+domain=$(cat /var/lib/ipvps.conf | cut -d'=' -f2)
 Cek=$(lsof -i:80 | cut -d' ' -f1 | awk 'NR==2 {print $1}')
 if [[ ! -z "$Cek" ]]; then
 sleep 1
@@ -262,43 +262,38 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "$(figlet   "")" | lolcat
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
-echo -e "\e[38;5;162m   \e[44;97;1m               KEYRIS VPNSTORE LITE                \033[0m \e[38;5;162m\e[0m"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
-echo -e "${BIYellow} │  ${BIYellow}OS        :  ${BIYellow}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' )${NC}"
-echo -e "${BIYellow} │  ${BIYellow}NS        :  ${BIYellow}$(cat /root/nsdomain)${NC}"
-echo -e "${BIYellow} │  ${BIYellow}DOMAIN    :  ${BIYellow}$(cat /etc/xray/domain)${NC}"
-echo -e "${BIYellow} │  ${BIYellow}RAM & CPU :  ${BIYellow}$totalram MB / $cpu_usage${NC}"
-echo -e "${BIYellow} │  ${BIYellow}SWAP RAM  :  ${BIYellow}$uram / $tram MB${NC}"
-echo -e "${BIYellow} │  ${BIYellow}IP VPS    :  ${BIYellow}$IPVPS${NC}"
-echo -e "${BIYellow} │  ${BIYellow}REBOOT    :  ${BIYellow}jam 02:00 malam${NC}"
-echo -e "${BIYellow} │  ${BIYellow}TELEGRAM  :  ${BIYellow}@Riswanvpnstore${NC}"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
-echo -e " ${BIYellow}│   ${BIYellow}SSH${NC}    :$ressh"" ${BIYellow}NGINX${NC}    :$resngx"" ${BIYellow}XRAY${NC}   :$resv2r"" ${BIYellow}TROJAN${NC}: $resv2r"
-echo -e " ${BIYellow}│   ${BIYellow}STUNNEL${NC}:$resst" "${BIYellow}DROPBEAR${NC} :$resdbr" "${BIYellow}SSH-WS${NC} :$ressshws"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
-echo -e "${BIYellow}           ═══════════════════════════════════${NC}"
-echo -e "${BIYellow}                ${BIYellow}SSH    TOTAL ACCOUNT : $ssh1$NC" 
-echo -e "${BIYellow}                ${BIYellow}VLESS  TOTAL ACCOUNT : $vla$NC"  
-echo -e "${BIYellow}                ${BIYellow}VMESS  TOTAL ACCOUNT : $vma$NC"
-echo -e "${BIYellow}                ${BIYellow}TROJAN TOTAL ACCOUNT : $tra$NC"  
-echo -e "${BIYellow}           ═══════════════════════════════════${NC}"
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
-echo -e "${BIYellow} │  ${BICyan}[${BIWhite}01${BICyan}] SSH     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}08${BICyan}] ADD-HOST        ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
-echo -e "${BIYellow} │  ${BICyan}[${BIWhite}02${BICyan}] VMESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}09${BICyan}] RUNNING         ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
-echo -e "${BIYellow} │  ${BICyan}[${BIWhite}03${BICyan}] VLESS   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}10${BICyan}] INSTALL UDP     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
-echo -e "${BIYellow} │  ${BICyan}[${BIWhite}04${BICyan}] TROJAN  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}11${BICyan}] INSTALL BOT     ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
-echo -e "${BIYellow} │  ${BICyan}[${BIWhite}05${BICyan}] SETING  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}12${BICyan}] BANDWITH        ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
-echo -e "${BIYellow} │  ${BICyan}[${BIWhite}06${BICyan}] TRIALL  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}13${BICyan}] MENU THEME      ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
-echo -e "${BIYellow} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}14${BICyan}] UPDATE SCRIPT   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BIYellow} │${NC}"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
-echo -e "${BIYellow} ┌═════════════════════════════════════════════════════┐${NC}"
-echo -e "${BIYellow} │${BIYellow} Version Script : $(cat /opt/.ver) Last Update ${BIYellow}"
-echo -e "${BIYellow} │${BIYellow} Username       :\033[1;36m $Name \e[0m"
-echo -e "${BIYellow} │${BIYellow} Expired script :${BIYellow} $exp ${BIYellow}:${BIYellow} $exp2${BIYellow} Days${NC}"
-echo -e "${BIYellow} └═════════════════════════════════════════════════════┘${NC}"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "\e[38;5;162m   \e[44;97;1m               FREENET LITE                \033[0m \e[38;5;162m\e[0m"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${w} │  ${w}OS        :  ${w}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' )${NC}"
+echo -e "${w} │  ${w}NS        :  ${w}$(cat /root/nsdomain)${NC}"
+echo -e "${w} │  ${w}DOMAIN    :  ${w}$(cat /etc/xray/domain)${NC}"
+echo -e "${w} │  ${w}RAM & CPU :  ${w}$totalram MB / $cpu_usage${NC}"
+echo -e "${w} │  ${w}SWAP RAM  :  ${w}$uram / $tram MB${NC}"
+echo -e "${w} │  ${w}IP VPS    :  ${w}$IPVPS${NC}"
+echo -e "${w} │  ${w}REBOOT    :  ${w}jam 02:00 malam${NC}"
+echo -e "${w} │  ${w}TELEGRAM  :  ${w}@Riswanvpnstore${NC}"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e " ${w}│   ${w}SSH${NC}    :$ressh"" ${w}NGINX${NC}    :$resngx"" ${w}XRAY${NC}   :$resv2r"" ${w}TROJAN${NC}: $resv2r"
+echo -e " ${w}│   ${w}STUNNEL${NC}:$resst" "${w}DROPBEAR${NC} :$resdbr" "${w}SSH-WS${NC} :$ressshws"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${w}                         SSH: $ssh1    VLESS: $vla    VMESS: $vma    TROJAN: $tra${NC}"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${w} │  ${BICyan}[${BIWhite}01${BICyan}] SSH     ${BICyan}[${w}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}08${BICyan}] ADD-HOST        ${BICyan}[${w}Menu${BICyan}]${NC}" "${w} │${NC}"
+echo -e "${w} │  ${BICyan}[${BIWhite}02${BICyan}] VMESS   ${BICyan}[${w}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}09${BICyan}] RUNNING         ${BICyan}[${w}Menu${BICyan}]${NC}" "${w} │${NC}"
+echo -e "${w} │  ${BICyan}[${BIWhite}03${BICyan}] VLESS   ${BICyan}[${w}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}10${BICyan}] INSTALL UDP     ${BICyan}[${w}Menu${BICyan}]${NC}" "${w} │${NC}"
+echo -e "${w} │  ${BICyan}[${BIWhite}04${BICyan}] TROJAN  ${BICyan}[${w}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}11${BICyan}] INSTALL BOT     ${BICyan}[${w}Menu${BICyan}]${NC}" "${w} │${NC}"
+echo -e "${w} │  ${BICyan}[${BIWhite}05${BICyan}] SETING  ${BICyan}[${w}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}12${BICyan}] BANDWITH        ${BICyan}[${w}Menu${BICyan}]${NC}" "${w} │${NC}"
+echo -e "${w} │  ${BICyan}[${BIWhite}06${BICyan}] TRIALL  ${BICyan}[${w}Menu${BICyan}]${NC}"  "${BICyan}  [${BIWhite}13${BICyan}] UPDATE SCRIPT   ${BICyan}[${w}Menu${BICyan}]${NC}" "${w} │${NC}"
+echo -e "${w} │  ${BICyan}[${BIWhite}07${BICyan}] BACKUP  ${BICyan}[${w}Menu${BICyan}]${NC}"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "${w} │${w} Version Script : $(cat /opt/.ver) Last Update ${w}"
+echo -e "${w} │${w} Username       :\033[1;36m $Name \e[0m"
+echo -e "${w} │${w} Expired script :${w} $exp ${w}:${w} $exp2${w} Days${NC}"
+echo -e "${w} ◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
 echo -e ""
 read -p "                   Select angka >>> : " opt
 echo -e ""
@@ -312,7 +307,7 @@ case $opt in
 7) clear ; menu-backup ;;
 8) clear ; add-host ;;
 9) clear ; running ;;
-10) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+10) clear ; clear ; wget https://raw.githubusercontent.com/Rerechan02/UDP/main/udp.sh && chmod +x udp.sh && ./udp.sh ;;
 11) clear ; 
 echo -e " ${w}◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
 echo -e " ${w} $NC${f}                   BOT MANAGER                $NC${z} $NC"
@@ -322,30 +317,54 @@ echo -e "  ${ORANGE}[2].${NC}\033[0;36m Restart BOT CYBERVPN${NC}"
 echo -e "  ${ORANGE}[3].${NC}\033[0;36m Stop BOT CYBERVPN${NC}"
 echo -e "  ${ORANGE}[4].${NC}\033[0;36m Uninstall BOT CYBERVPN${NC}"
 echo -e " ${w}◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
+echo -e "  ${ORANGE}[5]${NC}${rd} Install Bot KYT${NC}"
+echo -e "  ${ORANGE}[6]${NC}${rd} Hapus Bot KYT${NC}"
+echo -e "  ${ORANGE}[7]${NC}${rd} Stop Bot KYT${NC}"
+echo -e "  ${ORANGE}[8]${NC}${rd} Restart Bot KYT${NC}"
+echo -e "  ${ORANGE}[9]${NC}${rd} Install Bot KYT For Public${NC}"
+echo -e "  ${ORANGE}[10]${NC}${rd} Install Bot Bansos${NC}"
+echo -e ""
 echo -e "  ${ORANGE}[x].${NC}\033[0;36m Exit${NC}"
 echo -e " ${w}◇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━◇${NC}"
-read -p "  Select From Options [ 1 - 5 or x] : " menu
+read -p "  Select From Options [ 1 - 9 or x] : " menu
 case $menu in
 1) clear ;
-    wget -q https://raw.githubusercontent.com/Lite-VPN/v3/main/botku/bot2.sh && chmod +x bot2.sh && ./bot2.sh
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/bot2 && chmod +x bot2 && ./bot2
     ;;
 2) clear ;
-    wget -q https://raw.githubusercontent.com/Lite-VPN/v3/main/botku/restart-bot.sh && chmod +x restart-bot.sh && ./restart-bot.sh
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/restart-bot2 && chmod +x restart-bot2 && ./restart-bot2
     ;;
 3) clear ;
-    wget -q https://raw.githubusercontent.com/Lite-VPN/v3/main/botku/stop-bot.sh && chmod +x stop-bot.sh && ./stop-bot.sh
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/stop-bot2 && chmod +x stop-bot2 && ./stop-bot2
     ;;
 4) clear ;
-    wget -q https://raw.githubusercontent.com/Lite-VPN/v3/main/botku/del-bot.sh && chmod +x del-bot.sh && ./del-bot.sh
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/del-bot2 && chmod +x del-bot2 && ./del-bot2
     ;;
+5) clear ;
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/add-bot && chmod +x add-bot && ./add-bot
+    ;;
+6) clear ;
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/hapus-bot && chmod +x hapus-bot && ./hapus-bot
+    ;;
+7) clear ;
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/stop-bot && chmod +x stop-bot && ./stop-bot
+    ;;
+8) clear ;
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/restart-bot && chmod +x restart-bot && ./restart-bot
+    ;;
+9) clear ;
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/add-bot-bersama && chmod +x add-bot-bersama && ./add-bot-bersama
+   ;;
+10) clear ;
+    wget https://raw.githubusercontent.com/Lite-VPN/premiumsc/main/botol/bot-bansos && chmod +x bot-bansos && ./bot-bansos
+   ;;   
 x)
     menu
-    ;;
+   ;;
 esac
 ;;
 12) clear ; bw ;;
-13) clear ; menu-theme ;;
-14) clear ; update ;;
+13) clear ; update ;;
 0) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
