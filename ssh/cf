@@ -93,7 +93,7 @@ save_configuration() {
 # Fungsi utama
 main() {
   CF_ID="Vpnscriswan293@gmail.com"
-  CF_KEY="I35p_JHJAmnN9oXdBqlbLmQqZj4IX85JkMeXSaTh"
+  CF_KEY="1781894fb664d5af0011b8fb79234a9a151ed"
 
   prepare_directories
   generate_random_subdomains
