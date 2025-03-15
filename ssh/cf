@@ -14,7 +14,7 @@ prepare_directories() {
 generate_random_subdomains() {
   sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
   subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-  DOMAIN="mikorotok.cloud"
+  DOMAIN="rasiya.cloud"
   SUB_DOMAIN="Raondom-${sub}.${DOMAIN}"
   NS_DOMAIN="dns-${subsl}.${DOMAIN}"
 }
