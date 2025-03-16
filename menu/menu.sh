@@ -195,12 +195,6 @@ ressshws="${green}ON${NC}"
 else
 ressshws="${red}OFF${NC}"
 fi
-else
-# STATUS SERVICE HAPROXY
-   [ "$status_haproxy="${green}ON${NC}"
-else
-   [ "$status_haproxy="${RED}OF${NC} "
-fi
 ngx=$(service nginx status | grep active | cut -d ' ' $stat)
 if [ "$ngx" = "active" ]; then
 resngx="${green}ON${NC}"
@@ -297,7 +291,7 @@ echo -e "\033[96;1m│\e[97m ISP             : $ISP\033[0m "
 echo -e "\033[96;1m│\e[97m DOMAIN          : $(cat /etc/xray/domain) \033[0m "
 echo -e "\033[96;1m╰══════════════════════════════════════════════════════════╯\033[0m"
 echo -e "\033[96;1m╭══════════════════════════════════════════════════════════╮\033[0m "
-echo -e "     \e[0m\e[33mPROXY2 :\e[0m $status_haproxy \e[0m\e[33mPROXY :\e[0m $resst \e[0m\e[33mNGINX :\e[0m $resngx \e[0m\e[33mSSHWS :\e[0m $ressshws \e[0m\e[33mDROPBEAR :\e[0m $resdbr \e[0m"
+echo -e "     \e[0m\e[33m PROXY :\e[0m $resst \e[0m\e[33mNGINX :\e[0m $resngx \e[0m\e[33mSSHWS :\e[0m $ressshws \e[0m\e[33mDROPBEAR :\e[0m $resdbr \e[0m"
 echo -e "\033[97;1m╰══════════════════════════════════════════════════════════╯\033[0m "
 echo -e "\033[97;1m╭══════════════════════════════════════════════════════════╮\033[0m "
 echo -e "\033[97;1m                  SSH-WS PREMIUM   :   $ssh1         \033[0m " 
