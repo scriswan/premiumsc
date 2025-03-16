@@ -271,7 +271,7 @@ d1=$(date -d "$1" +%s)
 d2=$(date -d "$2" +%s)
 # Get system uptime
 uptime_info=$(uptime -p | sed 's/up //')
-}
+
 # Checking the expiration status
 if [[ "$exp2" -le "0" ]]; then
     ExpStatus="Expired"
@@ -280,7 +280,7 @@ else
     ExpStatus="Active"
     ExpColor="\e[32m"  # Green color for active
 fi
-}
+
 mai="datediff "$Exp" "$DATE""
 export sem=$( curl -s https://raw.githubusercontent.com/Riswan481/Jesstore/main/version)
 export pak=$( cat /home/.ver)
