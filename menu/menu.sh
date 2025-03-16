@@ -277,16 +277,8 @@ export sem=$( curl -s https://raw.githubusercontent.com/Riswan481/Jesstore/main/
 export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
-echo -e "$(figlet   "")" | lolcat
+echo -e "$(figlet   "JESVPN STORE")" | lolcat
 clear
-# Define color variables
-BIWhite="\033[1;37m"
-BIYellow="\033[1;33m"
-BIRed="\033[1;31m"
-NC="\033[0m" # Reset color
-LIGHTBLUE="\033[1;34m"  # Blue color for borders
-WHITE="\033[1;37m"      # White color for text
-
 echo -e "\033[96;1m╭══════════════════════════════════════════════════════════╮\033[0m "
 echo -e "\e[96;1m│\e[0m \033[43;1;97;1m          AUTO SCRIPT PREMIUM JESSVPN STORE                    \033[0m \e[96;1m│\e[0m"
 echo -e "\033[96;1m╰══════════════════════════════════════════════════════════╯\033[0m "
@@ -322,7 +314,6 @@ echo -e "\033[1m${LIGHTBLUE}┃${NC} ${WHITE}  [04] ${WHITE}TROJAN  ${WHITE}[Men
 echo -e "\033[1m${LIGHTBLUE}┃${NC} ${WHITE}  [05] ${WHITE}SETTINGS${WHITE}[Menu]      [12] ${WHITE}BANDWIDTH   ${WHITE}[Menu]${NC}  ${LIGHTBLUE}┃\033[0m${NC}"
 echo -e "\033[1m${LIGHTBLUE}┃${NC} ${WHITE}  [06] ${WHITE}TRIAL   ${WHITE}[Menu]      [13] ${WHITE}MENU THEME  ${WHITE}[Menu]${NC}  ${LIGHTBLUE}┃\033[0m${NC}"
 echo -e "\033[1m${LIGHTBLUE}┃${NC} ${WHITE}  [07] ${WHITE}BACKUP  ${WHITE}[Menu]      [14] ${WHITE}UPDATE      ${WHITE}[Menu]${NC}  ${LIGHTBLUE}┃\033[0m${NC}"
-echo -e "\033[1m${LIGHTBLUE
 echo -e "\033[96;1m╰══════════════════════════════════════════════════════════╯\033[0m"
 
 echo -e ""
