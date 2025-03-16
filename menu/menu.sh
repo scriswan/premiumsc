@@ -197,10 +197,9 @@ ressshws="${red}OFF${NC}"
 fi
 else
 # STATUS SERVICE HAPROXY
-if [[ $haproxy_service == "running" ]]; then 
-   status_haproxy="${green}ON${NC}"
+   [ "$status_haproxy="${green}ON${NC}"
 else
-   status_haproxy="${RED}OF${NC} "
+   [ "$status_haproxy="${RED}OF${NC} "
 fi
 ngx=$(service nginx status | grep active | cut -d ' ' $stat)
 if [ "$ngx" = "active" ]; then
