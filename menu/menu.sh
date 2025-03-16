@@ -272,6 +272,15 @@ d2=$(date -d "$2" +%s)
 # Get system uptime
 uptime_info=$(uptime -p | sed 's/up //')
 }
+# Checking the expiration status
+if [[ "$exp2" -le "0" ]]; then
+    ExpStatus="Expired"
+    ExpColor="\e[31m"  # Red color for expired
+else
+    ExpStatus="Active"
+    ExpColor="\e[32m"  # Green color for active
+fi
+}
 mai="datediff "$Exp" "$DATE""
 export sem=$( curl -s https://raw.githubusercontent.com/Riswan481/Jesstore/main/version)
 export pak=$( cat /home/.ver)
@@ -303,6 +312,7 @@ echo -e "\033[96;1m╭═══════════════════�
 echo -e "\033[96;1m│\e[0m\e[33m  Version :\033[0m \e[0m$(cat /opt/.ver)  \e[0m "
 echo -e "\033[96;1m│\e[0m\e[33m  Owner   :\033[0m \e[0mJESVPN STORE \e[0m "
 echo -e "\033[96;1m│\e[0m\e[33m  buyer   :\033[0m \e[0m$Name \e[0m"
+echo -e "\033[96;1m│\e[0m\e[33m  Status  :\033[0m \e[0m${ExpStatus}\033[0m"
 echo -e "\033[96;1m│\e[0m\e[33m  Expired :\033[0m \e[0m$exp \e[0m"
 echo -e "\033[96;1m|\e[0m\e[33m  Tersisa :\033[0m \e[0m$exp2 hari \033[0m "
 echo -e "\033[96;1m╰══════════════════════════════════════════════════════════╯\033[0m "
