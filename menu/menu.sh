@@ -280,7 +280,7 @@ clear
 echo -e "$(figlet   "JESVPN STORE")" | lolcat
 clear
 echo -e "\033[96;1m╭══════════════════════════════════════════════════════════╮\033[0m "
-echo -e "\e[96;1m│\e[0m \033[43;1;97;1m          AUTO SCRIPT PREMIUM JESSVPN STORE             \033[0m \e[96;1m│\e[0m"
+echo -e "\e[96;1m│\e[0m \033[43;1;97;1m           AUTO SCRIPT PREMIUM JESSVPN STORE            \033[0m \e[96;1m│\e[0m"
 echo -e "\033[96;1m╰══════════════════════════════════════════════════════════╯\033[0m "
 echo -e "\033[96;1m╭══════════════════════════════════════════════════════════╮\033[0m "
 echo -e "\033[96;1m│\e[97m SYSTEM          : $(cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME=//g' | sed 's/"//g')     \033[0m "
