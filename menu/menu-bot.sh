@@ -55,7 +55,7 @@ function display_menu {
 LIGHTGREEN="\033[1;32m"
 NC="\033[0m"  # Reset color
 
-──────────────────────────────────────────\033[0m"
+echo -e "\033[1;93m──────────────────────────────────────────\033[0m"
     echo -e "\e[44;97;1m               BOT TELEGRAM               $NC" echo -e "\033[1;93m anda bisa mengunakan bot simpel untuk\033[0m"
     echo -e "\033[1;93m membuat akun lewat telegram silhakn\033[0m"
     echo -e "\033[1;93m anda buat bot di telegram cari bot\033[0m"
