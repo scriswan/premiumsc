@@ -11,5 +11,8 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 ```
 wget https://raw.githubusercontent.com/scriswan/premiumsc/main/update.sh && chmod +x update.sh && ./update.sh
 ```
-
+## jika gagal install
+```
+screen -r -d setup
+```
 ## AutoScript By RiswanStore
