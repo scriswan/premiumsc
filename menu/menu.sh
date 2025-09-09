@@ -305,7 +305,7 @@ echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━�
 
 # Jumlah akun
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃     ${NC}${BIRed}  SSH : $ssh1  VMESS : $vma  VLESS : $vla  TROJAN : $tra ${NC}"
+echo -e "${BIWhite}┃   ${NC}${BIRed}  SSH : $ssh1  VMESS : $vma  VLESS : $vla  TROJAN : $tra ${NC}"
 echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
 
 # Status service
