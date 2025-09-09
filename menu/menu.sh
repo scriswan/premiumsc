@@ -314,8 +314,6 @@ echo -e "${BIWhite}┃ SSH : $ressh   NGINX : $resngx   XRAY : $resv2r   TROJAN 
 echo -e "${BIWhite}┃ STUNNEL : $resst   DROPBEAR : $resdbr   SSH-WS : $ressshws"
 echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
 
-# Menu
-echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
 echo -e "\033[1m${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m${NC}"
 echo -e "\033[1m${BIWhite}┃${NC} ${BIRed} ${BIWhite}                 ${BIWhite}🔹 MENU OPTIONS 🔹${NC}                ${BIWhite}┃\033[0m${NC}"
 echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [01] ${BIWhite}SSH     ${BIWhite}[Menu]      [08] ${BIWhite}ADD-HOST    ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
