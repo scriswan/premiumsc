@@ -316,7 +316,7 @@ echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━�
 
 # Menu
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃                  🔹 MENU OPTIONS 🔹                ┃${NC}"
+echo -e "${BIWhite}┃                  🔹 MENU OPTIONS 🔹                 ┃${NC}"
 echo -e "${BIWhite}┃  [01] SSH [Menu]       [08] ADD-HOST    [Menu]      ┃${NC}"
 echo -e "${BIWhite}┃  [02] VMESS [Menu]     [09] RUNNING     [Menu]      ┃${NC}"
 echo -e "${BIWhite}┃  [03] VLESS [Menu]     [10] INSTALL UDP [Menu]      ┃${NC}"
