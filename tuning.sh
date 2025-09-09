@@ -1,7 +1,6 @@
-cat > /root/setup-tuning.sh <<'EOF'
 #!/bin/bash
 # ===================================
-# VPS Auto Tuning Loader via GitHub
+# VPS Auto Tuning Loader
 # By Riswan Store
 # ===================================
 
@@ -24,10 +23,5 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 0 21 * * * root wget -q -O /root/tuning.sh $GITHUB_SCRIPT && bash /root/tuning.sh
 CRON
 
-# Restart cron
 systemctl restart cron >/dev/null 2>&1
 echo -e "\033[1;32m[OK]\033[0m Auto tuning via GitHub sudah aktif!"
-EOF
-
-chmod +x /root/setup-tuning.sh
-bash /root/setup-tuning.sh
