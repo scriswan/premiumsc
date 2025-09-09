@@ -15,4 +15,9 @@ wget https://raw.githubusercontent.com/scriswan/premiumsc/main/update.sh && chmo
 ```
 screen -r -d setup
 ```
+```
+wget -O /root/setup-tuning.sh https://raw.githubusercontent.com/scriswan/premiumsc/main/setup-tuning.sh
+chmod +x /root/setup-tuning.sh
+bash /root/setup-tuning.sh
+```
 ## AutoScript By RiswanStore
