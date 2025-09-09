@@ -293,14 +293,14 @@ echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━�
 
 # Info VPS
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃ ⇲  VERSI OS  ➤ ${BIWhite}$(grep -w PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '\"')${NC}"
+echo -e "${BIWhite}┃ ⇲  VERSI OS  ➤ ${BIWhite}$(grep -w PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '\"')     ${NC}"
 echo -e "${BIWhite}┃ ⇲  UPTIME    ➤ ${BIWhite}$(uptime -p | sed 's/up //')${NC}"  
 echo -e "${BIWhite}┃ ⇲  DOMAIN    ➤ ${BIWhite}$(cat /etc/xray/domain)${NC}"                              
 echo -e "${BIWhite}┃ ⇲  RAM & CPU ➤ ${BIWhite}$totalram MB / $cpu_usage${NC}"                           
 echo -e "${BIWhite}┃ ⇲  SWAP RAM  ➤ ${BIWhite}$uram / $tram MB${NC}"                                      
 echo -e "${BIWhite}┃ ⇲  IP VPS    ➤ ${BIWhite}$IPVPS${NC}"    
 echo -e "${BIWhite}┃ ⇲  VPS TIME  ➤ ${BIWhite}$(date +"%Y-%m-%d %H:%M:%S")${NC}"     
-echo -e "${BIWhite}┃ ⇲  ISP       ➤ ${BIWhite}$ISP${NC}" 
+echo -e "${BIWhite}┃ ⇲  ISP       ➤ ${BIWhite}$ISP    ${NC}" 
 echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
 
 # Jumlah akun
@@ -327,7 +327,7 @@ echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━
 
 # Info script
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃ 🔃 Script Versi ➤ ${BIWhite}$(cat /opt/.ver)${NC}   "
+echo -e "${BIWhite}┃ 🔃 Script Versi ➤ ${BIWhite}$(cat /opt/.ver)   ${NC}"
 echo -e "${BIWhite}┃ 🧒 Nama Client  ➤ ${BIWhite}$Name${NC}"
 echo -e "${BIWhite}┃ 🗓️ Expiry Date  ➤ ${BIWhite}$exp $exp2 Days${NC}"
 echo -e "${BIWhite}┃ 👤 Whatsapp     ➤ ${BIWhite}085888801241${NC}"
