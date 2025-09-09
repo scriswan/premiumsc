@@ -279,53 +279,70 @@ IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "$(figlet   "")" | lolcat
 clear
+
+# Warna
 BIWhite="\033[1;37m"
 BIYellow="\033[1;33m"
 BIRed="\033[1;31m"
 NC="\033[0m" # Reset color
-LIGHTGREEN="\033[1;32m"
 
-echo -e "\033[1m${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC}${BIYellow}  \e[41;97;1m              ◥꧁BY JESSTUNNEL꧂◤                   \033[0m\e[38;5;196m${NC}"
-echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m${NC}"
-echo -e "\033[1m${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC}${BIWhite} ⇲  ${BIWhite}VERSI OS  ➤ ${BIWhite}$(cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME=//g' | sed 's/"//g')     ${NC}"
-echo -e "\033[1m${BIWhite}┃${BIWhite} ⇲  ${BIWhite}UPTIME    ➤ ${BIWhite}$(uptime -p | sed 's/up //')    ${NC}"  
-echo -e "\033[1m${BIWhite}┃${BIWhite} ⇲  ${BIWhite}DOMAIN    ➤ ${BIWhite}$(cat /etc/xray/domain)    ${NC}"                              
-echo -e "\033[1m${BIWhite}┃${BIWhite} ⇲  ${BIWhite}RAM & CPU ➤ ${BIWhite}$totalram MB / $cpu_usage    ${NC}"                           
-echo -e "\033[1m${BIWhite}┃${BIWhite} ⇲  ${BIWhite}SWAP RAM  ➤ ${BIWhite}$uram / $tram MB    ${NC}"                                      
-echo -e "\033[1m${BIWhite}┃${BIWhite} ⇲  ${BIWhite}IP VPS    ➤ ${BIWhite}$IPVPS    ${NC}"    
-echo -e "\033[1m${BIWhite}┃${BIWhite} ⇲  ${BIWhite}VPS TIME  ➤ ${BIWhite}$(date +"%Y-%m-%d %H:%M:%S")    ${NC}"     
-echo -e "\033[1m${BIWhite}┃${BIWhite} ⇲  ${BIWhite}ISP       ➤ ${BIWhite}$ISP    ${NC}" 
-echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m${NC}"
-echo -e "\033[1m${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC}${BIRed} ${BIWhite}     SSH : $ssh1  VMESS : $vma  VLESS : $vla  TROJAN : $tra $NC"
-echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m${NC}"
-echo -e "\033[1m${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC}${BIWhite}  ${BIWhite}  SSH ${NC}: $ressh"" ${BIWhite} NGINX ${NC}: $resngx"" ${BIWhite}  XRAY ${NC}: $resv2r"" ${BIWhite} TROJAN ${NC}: $resv2r"
-echo -e "\033[1m${BIWhite}┃${NC}${BIWhite}   ${BIWhite}   STUNNEL ${NC}: $resst" "${BIWhite} DROPBEAR ${NC}: $resdbr" "${BIWhite} SSH-WS ${NC}: $ressshws" 
-echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m${NC}"
-echo -e "\033[1m${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC} ${BIRed} ${BIWhite}                 ${BIWhite}🔹 MENU OPTIONS 🔹${NC}                ${BIWhite}┃\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [01] ${BIWhite}SSH     ${BIWhite}[Menu]      [08] ${BIWhite}ADD-HOST    ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [02] ${BIWhite}VMESS   ${BIWhite}[Menu]      [09] ${BIWhite}RUNNING     ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [03] ${BIWhite}VLESS   ${BIWhite}[Menu]      [10] ${BIWhite}INSTALL UDP ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [04] ${BIWhite}TROJAN  ${BIWhite}[Menu]      [11] ${BIWhite}INSTALL BOT ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [05] ${BIWhite}SETTINGS${BIWhite}[Menu]      [12] ${BIWhite}BANDWIDTH   ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [06] ${BIWhite}TRIAL   ${BIWhite}[Menu]      [13] ${BIWhite}MENU THEME  ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [07] ${BIWhite}BACKUP  ${BIWhite}[Menu]      [14] ${BIWhite}UPDATE      ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
-echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m${NC}"
-echo -e "\033[1m${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC}${BIWhite}↪️ Script Versi   ➤ ${BIWhite}$(cat /opt/.ver)   ${NC}"
-echo -e "\033[1m${BIWhite}┃${NC}${BIWhite}🧒 Nama Clinte    ➤ ${BIWhite}$Name    ${NC}"
-echo -e "\033[1m${BIWhite}┃${NC}${BIWhite}🗓️ Expiry Date    ➤ ${BIWhite}$exp ${BIWhite}➤${BIWhite} $exp2${BIWhite} Days.   ${NC}"
-echo -e "\033[1m${BIWhite}┃${NC}${BIWhite}👤 Whastapp Owner ➤ ${BIWhite}085888801241     ${NC}"
-echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m${NC}"
-echo -e "\033[1m${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m${NC}"
-echo -e "\033[1m${BIWhite}┃${NC} ${BIRed}    ${BIWhite}TERIMAKASIH SUDAH MENGGUNAKAN BY JESSTUNNEL${NC}     ${BIWhite}┃\033[0m${NC}"          
-echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m${NC}"
+# Header
+echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
+echo -e "${BIWhite}┃${NC}${BIYellow}  \e[41;97;1m              ◥꧁BY JESSTUNNEL꧂◤                   ${NC}"
+echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
+
+# Info VPS
+echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
+echo -e "${BIWhite}┃ ⇲  VERSI OS  ➤ ${BIWhite}$(grep -w PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '\"')${NC}"
+echo -e "${BIWhite}┃ ⇲  UPTIME    ➤ ${BIWhite}$(uptime -p | sed 's/up //')${NC}"  
+echo -e "${BIWhite}┃ ⇲  DOMAIN    ➤ ${BIWhite}$(cat /etc/xray/domain)${NC}"                              
+echo -e "${BIWhite}┃ ⇲  RAM & CPU ➤ ${BIWhite}$totalram MB / $cpu_usage${NC}"                           
+echo -e "${BIWhite}┃ ⇲  SWAP RAM  ➤ ${BIWhite}$uram / $tram MB${NC}"                                      
+echo -e "${BIWhite}┃ ⇲  IP VPS    ➤ ${BIWhite}$IPVPS${NC}"    
+echo -e "${BIWhite}┃ ⇲  VPS TIME  ➤ ${BIWhite}$(date +"%Y-%m-%d %H:%M:%S")${NC}"     
+echo -e "${BIWhite}┃ ⇲  ISP       ➤ ${BIWhite}$ISP${NC}" 
+echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
+
+# Jumlah akun
+echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
+echo -e "${BIWhite}┃${NC}${BIRed}  SSH : $ssh1  VMESS : $vma  VLESS : $vla  TROJAN : $tra ${NC}"
+echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
+
+# Status service
+echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
+echo -e "${BIWhite}┃ SSH : $ressh   NGINX : $resngx   XRAY : $resv2r   TROJAN : $resv2r"
+echo -e "${BIWhite}┃ STUNNEL : $resst   DROPBEAR : $resdbr   SSH-WS : $ressshws"
+echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
+
+# Menu
+echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
+echo -e "${BIWhite}┃                  🔹 MENU OPTIONS 🔹                 ┃${NC}"
+echo -e "${BIWhite}┃  [01] SSH [Menu]       [08] ADD-HOST    [Menu]      ┃${NC}"
+echo -e "${BIWhite}┃  [02] VMESS [Menu]     [09] RUNNING     [Menu]      ┃${NC}"
+echo -e "${BIWhite}┃  [03] VLESS [Menu]     [10] INSTALL UDP [Menu]      ┃${NC}"
+echo -e "${BIWhite}┃  [04] TROJAN [Menu]    [11] INSTALL BOT [Menu]      ┃${NC}"
+echo -e "${BIWhite}┃  [05] SETTINGS [Menu]  [12] BANDWIDTH   [Menu]      ┃${NC}"
+echo -e "${BIWhite}┃  [06] TRIAL [Menu]     [13] MENU THEME  [Menu]      ┃${NC}"
+echo -e "${BIWhite}┃  [07] BACKUP [Menu]    [14] UPDATE      [Menu]      ┃${NC}"
+echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
+
+# Info script
+echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
+echo -e "${BIWhite}┃ Script Versi   ➤ ${BIWhite}$(cat /opt/.ver)${NC}"
+echo -e "${BIWhite}┃ 🧒 Nama Client  ➤ ${BIWhite}$Name${NC}"
+echo -e "${BIWhite}┃ 🗓️ Expiry Date  ➤ ${BIWhite}$exp ➤ $exp2 Days${NC}"
+echo -e "${BIWhite}┃ 👤 Whatsapp     ➤ ${BIWhite}085888801241${NC}"
+echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
+
+# Footer
+echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
+echo -e "${BIWhite}┃     TERIMAKASIH SUDAH MENGGUNAKAN BY JESSTUNNEL     ┃${NC}"
+echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
 echo -e ""
-read -p "               Pilih Nomor └╼>>>  bro: " opt
+
+# Input Pilihan (Bold + Kuning)
+echo -ne "               ${BIYellow}\033[1mPilih Nomor └╼>>> ${NC}"
+read opt
 echo -e ""
 case $opt in
 1) clear ; menu-ssh ;;
