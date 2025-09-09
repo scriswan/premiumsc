@@ -305,7 +305,7 @@ echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━�
 
 # Jumlah akun
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃${NC}${BIRed}  SSH : $ssh1  VMESS : $vma  VLESS : $vla  TROJAN : $tra ${NC}"
+echo -e "${BIWhite}┃     ${NC}${BIRed}  SSH : $ssh1  VMESS : $vma  VLESS : $vla  TROJAN : $tra ${NC}"
 echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
 
 # Status service
@@ -316,7 +316,7 @@ echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━�
 
 # Menu
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃                  🔹 MENU OPTIONS 🔹                 ┃${NC}"
+echo -e "${BIWhite}┃                  🔹 MENU OPTIONS 🔹                ┃${NC}"
 echo -e "${BIWhite}┃  [01] SSH [Menu]       [08] ADD-HOST    [Menu]      ┃${NC}"
 echo -e "${BIWhite}┃  [02] VMESS [Menu]     [09] RUNNING     [Menu]      ┃${NC}"
 echo -e "${BIWhite}┃  [03] VLESS [Menu]     [10] INSTALL UDP [Menu]      ┃${NC}"
@@ -328,9 +328,9 @@ echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━�
 
 # Info script
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃ Script Versi   ➤ ${BIWhite}$(cat /opt/.ver)${NC}"
+echo -e "${BIWhite}┃ 🔃 Script Versi ➤ ${BIWhite}$(cat /opt/.ver)${NC}   "
 echo -e "${BIWhite}┃ 🧒 Nama Client  ➤ ${BIWhite}$Name${NC}"
-echo -e "${BIWhite}┃ 🗓️ Expiry Date  ➤ ${BIWhite}$exp ➤ $exp2 Days${NC}"
+echo -e "${BIWhite}┃ 🗓️ Expiry Date  ➤ ${BIWhite}$exp $exp2 Days${NC}"
 echo -e "${BIWhite}┃ 👤 Whatsapp     ➤ ${BIWhite}085888801241${NC}"
 echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
 
