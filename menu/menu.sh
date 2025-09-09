@@ -316,15 +316,16 @@ echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━�
 
 # Menu
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃                  🔹 MENU OPTIONS 🔹                 ┃${NC}"
-echo -e "${BIWhite}┃  [01] SSH [Menu]       [08] ADD-HOST    [Menu]      ┃${NC}"
-echo -e "${BIWhite}┃  [02] VMESS [Menu]     [09] RUNNING     [Menu]      ┃${NC}"
-echo -e "${BIWhite}┃  [03] VLESS [Menu]     [10] INSTALL UDP [Menu]      ┃${NC}"
-echo -e "${BIWhite}┃  [04] TROJAN [Menu]    [11] INSTALL BOT [Menu]      ┃${NC}"
-echo -e "${BIWhite}┃  [05] SETTINGS [Menu]  [12] BANDWIDTH   [Menu]      ┃${NC}"
-echo -e "${BIWhite}┃  [06] TRIAL [Menu]     [13] MENU THEME  [Menu]      ┃${NC}"
-echo -e "${BIWhite}┃  [07] BACKUP [Menu]    [14] UPDATE      [Menu]      ┃${NC}"
-echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
+echo -e "\033[1m${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\033[0m${NC}"
+echo -e "\033[1m${BIWhite}┃${NC} ${BIRed} ${BIWhite}                 ${BIWhite}🔹 MENU OPTIONS 🔹${NC}                ${BIWhite}┃\033[0m${NC}"
+echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [01] ${BIWhite}SSH     ${BIWhite}[Menu]      [08] ${BIWhite}ADD-HOST    ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
+echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [02] ${BIWhite}VMESS   ${BIWhite}[Menu]      [09] ${BIWhite}RUNNING     ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
+echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [03] ${BIWhite}VLESS   ${BIWhite}[Menu]      [10] ${BIWhite}INSTALL UDP ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
+echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [04] ${BIWhite}TROJAN  ${BIWhite}[Menu]      [11] ${BIWhite}INSTALL BOT ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
+echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [05] ${BIWhite}SETTINGS${BIWhite}[Menu]      [12] ${BIWhite}BANDWIDTH   ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
+echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [06] ${BIWhite}TRIAL   ${BIWhite}[Menu]      [13] ${BIWhite}MENU THEME  ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
+echo -e "\033[1m${BIWhite}┃${NC} ${BIWhite}  [07] ${BIWhite}BACKUP  ${BIWhite}[Menu]      [14] ${BIWhite}UPDATE      ${BIWhite}[Menu]${NC}  ${BIWhite}┃\033[0m${NC}"
+echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\033[0m${NC}"
 
 # Info script
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
