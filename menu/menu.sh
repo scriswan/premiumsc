@@ -288,7 +288,7 @@ NC="\033[0m" # Reset color
 
 # Header
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃${NC}${BIYellow}  \e[41;97;1m              ◥꧁BY JESSTUNNEL꧂◤                   ${NC}"
+echo -e "${BIWhite}┃${NC}${BIYellow}  \e[41;97;1m            ◥꧁BY PGETUNNEL VPN꧂◤                   ${NC}"
 echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
 
 # Info VPS
