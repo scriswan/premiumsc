@@ -283,7 +283,7 @@ clear
 # Warna
 BIWhite="\033[1;37m"
 BIYellow="\033[1;33m"
-BIRed="\033[1;31m"
+BIblue="\033[1;31m"
 NC="\033[0m" # Reset color
 
 # Header
@@ -327,15 +327,8 @@ echo -e "\033[1m${BIWhite}╰━━━━━━━━━━━━━━━━━
 
 # Info script
 echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃ 🔃 Script Versi ➤ ${BIWhite}$(cat /opt/.ver)   ${NC}"
 echo -e "${BIWhite}┃ 🧒 Nama Client  ➤ ${BIWhite}$Name${NC}"
 echo -e "${BIWhite}┃ 🗓️ Expiry Date  ➤ ${BIWhite}$exp $exp2 Days${NC}"
-echo -e "${BIWhite}┃ 👤 Whatsapp     ➤ ${BIWhite}085888801241${NC}"
-echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
-
-# Footer
-echo -e "${BIWhite}╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
-echo -e "${BIWhite}┃     TERIMAKASIH SUDAH MENGGUNAKAN BY JESSTUNNEL     ┃${NC}"
 echo -e "${BIWhite}╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
 echo -e ""
 
